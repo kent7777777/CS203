@@ -9,15 +9,10 @@ package w1d2_projects;
  *
  * @author Kevin
  */
-import java.io.*;
-public class Player {
-    int num = 0;
-    
-    public void guess(){
-        Console c = System.console();
-        
-        num =  Integer.parseInt(c.readLine());
-        System.out.println("guessing " + num);
+public class GameLauncher {
+    public static void main (String[] args){
+        GuessGame game = new GuessGame();
+        game.startGame();
     }
     
 }

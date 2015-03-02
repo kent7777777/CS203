@@ -9,14 +9,11 @@ package w1d2_projects;
  *
  * @author Kevin
  */
-import java.io.*;
 public class Player {
     int num = 0;
     
     public void guess(){
-        Console c = System.console();
-        
-        num =  Integer.parseInt(c.readLine());
+        num = (int) (Math.random() * 10);
         System.out.println("guessing " + num);
     }
     
