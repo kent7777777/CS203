@@ -33,6 +33,5 @@ public class GameHelper {
     }
     public ArrayList<String> placeDotCom(int comSize) {
         ArrayList<String> alphaCells = new ArrayList<>();
-        String temp
-    }
+        
 }
