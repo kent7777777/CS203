@@ -1,4 +1,4 @@
-package lecture;
+package UpdatedBall;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -40,7 +40,7 @@ public class BallAnimation {
         frame.getContentPane().add(CENTER, d);
         MyKeyListener keys = new MyKeyListener();
         frame.addKeyListener(keys);
-        frame.setSize(300, 300);
+        frame.setSize(600, 600);
         frame.setVisible(true);
         
 
@@ -57,21 +57,21 @@ public class BallAnimation {
             }
             x += ChangeX;
             y += ChangeY;
-            if(x > 250){
-                x = 250;
+            if(x > 575){
+                x = 575;
             }
-            if(x < 0){
-                x = 0;
+            if(x < 25){
+                x = 25;
             }
-            if(y > 250){
-                y = 250;
+            if(y > 575){
+                y = 575;
             }
-            if(y < 0){
-                y = 0;
+            if(y < 25){
+                y = 25;
             }
             try{
             frame.repaint();
-            Thread.sleep(100);
+            Thread.sleep(10);
             }catch(Exception e){
                 
             }
