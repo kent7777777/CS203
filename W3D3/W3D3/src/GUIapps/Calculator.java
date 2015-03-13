@@ -7,6 +7,8 @@ package GUIapps;
 
 import java.awt.BorderLayout;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 /**
@@ -96,6 +98,29 @@ public class Calculator {
         CButton.setPreferredSize(new Dimension(50,50));
         field.setPreferredSize(new Dimension(160,50));
         
+        CButton.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                field.setText("");
+            }
+            
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         panel1.add(button1);
         panel1.add(button2);
         panel1.add(button3);
@@ -127,6 +152,16 @@ public class Calculator {
         frame.setVisible(true);
         
     }
+    
+    public class ButtonActionListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JButton button = (JButton)e.getSource();
+            field.setText(field.getText() + button.getText());
+        }
+        
+}
     
     
 }
